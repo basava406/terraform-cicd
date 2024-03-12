@@ -7,6 +7,15 @@ terraform {
   }
 }
 
+provider "azurerm" {
+  features {}
+
+subscription_id = "310ea27b-def2-4647-8770-41b098c50021"
+client_id = "0dfbcb2a-b46b-4965-9ea9-86b505cc618b"
+client_secret = "cbU8Q~pBHNDW6cbolzhVreKVfxhoGa3s9grcadBT"
+tenant_id = "d312bb44-f783-48b1-8194-6b69cee18d4c"
+}
+
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.location
